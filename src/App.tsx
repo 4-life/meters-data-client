@@ -26,7 +26,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch('http://test.4life.work/api/v1/metrics')
+    fetch('//test.4life.work/api/v1/metrics')
       .then(res => res.json())
       .then(
         (result) => {
@@ -50,7 +50,7 @@ function App() {
       { !isLoaded && <LinearProgress /> }
       <Container>
         { error && <Typography>{ error }</Typography> }
-        <Box mt={ 10 } mb={ 1 }>
+        <Box mt={ 5 } mb={ 1 }>
           <Typography color="textSecondary">
             Показания на { currentDate(latestWaterData?.date) }
           </Typography>
@@ -95,10 +95,10 @@ function App() {
               Version: { latestWaterData?.version || 0 }
             </Typography>
             <Typography color="textSecondary">
-              Impulse: [{ latestWaterData?.imp0 || 0 },{ latestWaterData?.imp1 || 0 }]
+              Impulse: [{ latestWaterData?.imp0 || 0 }, { latestWaterData?.imp1 || 0 }]
             </Typography>
             <Typography color="textSecondary">
-              Delta: [{ latestWaterData?.delta0 || 0 },{ latestWaterData?.delta1 || 0 }]
+              Delta: [{ latestWaterData?.delta0 || 0 }, { latestWaterData?.delta1 || 0 }]
             </Typography>
             <Typography color="textSecondary">
               rssi: { latestWaterData?.rssi || 0 }
