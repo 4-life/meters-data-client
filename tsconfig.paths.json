@@ -1,0 +1,11 @@
+
+// CRA automatically removes "compilerOptions.paths" property
+// if it's set in tsconfig.json, but all works well with "extends" hack:
+// https://github.com/facebook/create-react-app/issues/5118#issuecomment-464025389
+{
+  "compilerOptions": {
+    "paths": {
+      "*": ["./types/*", "*"]
+    }
+  },
+}
